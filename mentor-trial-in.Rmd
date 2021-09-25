@@ -1,0 +1,27 @@
+---
+title: "Mentor trial simulation"
+output: html_notebook
+---
+
+
+```{r include=FALSE}
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(DeclareDesign, 
+               randomizr, 
+               fabricatr, 
+               estimatr, 
+               DesignLibrary
+               )
+```
+
+An attempt to use the DeclareDesign package to describe the research design by [Moxnes et al](https://www.socialscienceregistry.org/trials/3874/history/41807). The three-armed parallell randomized control trial is simulated in order to better understand the properties of the trial, based on the MIDA-framework for describing designs. 
+
+# Simulate population data
+
+```{r}
+declare_model(N = 300, U = rnorm(N))
+```
+
+
+
+
